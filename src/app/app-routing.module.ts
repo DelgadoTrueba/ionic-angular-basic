@@ -5,7 +5,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   { 
     path: 'recipes', 
-    loadChildren: './recipes/recipes.module#RecipesPageModule' 
+    children: [
+      { path: '', loadChildren: './recipes/recipes.module#RecipesPageModule' },
+      { path: ':recipeId', loadChildren: './recipes/recipe-detail/recipe-detail.module#RecipeDetailPageModule' }
+    ]
   },
 ];
 
