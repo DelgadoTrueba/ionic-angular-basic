@@ -5,5 +5,12 @@
 </ion-header>
 
 <ion-content>
-  <p>Recipes page works!</p>
+  <ion-list *ngFor="let recipe of recipes">
+    <ion-item>
+      <ion-avatar slot='start'>
+        <ion-img [src]='recipe.imageUrl'></ion-img>
+      </ion-avatar>
+      <ion-label>{{recipe.tittle}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
