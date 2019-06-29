@@ -1,9 +1,14 @@
 <ion-header>
   <ion-toolbar color='primary'>
-    <ion-title>{{loadedRecipe.tittle}}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaulHref="/recipes"></ion-back-button>
     </ion-buttons>
+    <ion-title>{{loadedRecipe.tittle}}</ion-title>
+    <ion-buttons slot="primary">
+        <ion-button (click)="onDeleteRecipe()">
+          <ion-icon name='trash' slot='icon-only'></ion-icon>
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
